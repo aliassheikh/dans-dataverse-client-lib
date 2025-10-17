@@ -31,12 +31,16 @@ public class DatasetVersion {
     private Integer id;
     private Integer datasetId;
     private String datasetPersistentId;
+    private DatasetType datasetType;
     private String storageIdentifier;
     private Integer versionNumber;
+    private Integer internalVersionNumber;
     private Integer versionMinorNumber;
     private String versionState;
     private String latestVersionPublishingState;
     private String versionNote;
+    private String deaccessionNote;
+    private String deaccessionLink;
     @JsonProperty("UNF")
     private String unf;
     private String lastUpdateTime;
