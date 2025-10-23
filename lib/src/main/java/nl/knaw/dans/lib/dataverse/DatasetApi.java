@@ -81,6 +81,7 @@ public class DatasetApi extends AbstractTargetedApi {
      * @see <a href="https://guides.dataverse.org/en/latest/api/native-api.html#get-json-representation-of-a-dataset" target="_blank">Dataverse documentation</a>
      * @deprecated use {@link #getVersion()} instead
      */
+    @Deprecated(since = "1.1.0", forRemoval = true)
     public DataverseHttpResponse<DatasetLatestVersion> getLatestVersion() throws IOException, DataverseException {
         return getUnversionedFromTarget("", DatasetLatestVersion.class);
     }

@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import nl.knaw.dans.lib.dataverse.model.file.FileMeta;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
@@ -38,17 +39,21 @@ public class DatasetVersion {
     private Integer versionMinorNumber;
     private String versionState;
     private String latestVersionPublishingState;
-    private String versionNote;
     private String deaccessionNote;
-    private String deaccessionLink;
+    private URI deaccessionLink;
+    private String distributionDate;
+    private String productionDate;
     @JsonProperty("UNF")
     private String unf;
     private String lastUpdateTime;
     private String releaseTime;
     private String createTime;
-    private String distributionDate;
-    private String productionDate;
-    private Boolean fileAccessRequest;
+    private String alternativePersistentId;
+    private String publicationDate;
+    private String citationDate;
+    private String citation;
+    private String versionNote;
+    private License license;
     private String termsOfUse;
     private String confidentialityDeclaration;
     private String specialPermissions;
@@ -64,15 +69,12 @@ public class DatasetVersion {
     private String contactForAccess;
     private String sizeOfCollection;
     private String studyCompletion;
-    private License license;
+    private Boolean fileAccessRequest;
+    private Map<String, MetadataBlock> metadataBlocks;
+
     private String protocol;
     private String authority;
     private String identifier;
-    private Map<String, MetadataBlock> metadataBlocks;
     private List<FileMeta> files;
-    private String citation;
-    private String publicationDate;
-    private String citationDate;
-    private String alternativePersistentId;
     // isPartOf ignore!
 }
