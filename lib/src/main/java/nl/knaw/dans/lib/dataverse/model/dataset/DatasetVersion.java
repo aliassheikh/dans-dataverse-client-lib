@@ -43,6 +43,7 @@ public class DatasetVersion {
     private URI deaccessionLink;
     private String distributionDate;
     private String productionDate;
+    private String archiveNote;
     @JsonProperty("UNF")
     private String unf;
     private String lastUpdateTime;
