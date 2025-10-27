@@ -27,5 +27,6 @@ public class DataversePublish extends ExampleBase {
         String alias = args[0];
         DataverseHttpResponse<DataMessage> r = client.dataverse(alias).publish();
         log.info("Status Line of DATAVERSE PUBLICATION: {} {}", r.getHttpResponse().getCode(), r.getHttpResponse().getReasonPhrase());
+        log.info("Response message: {}", r.getData().getMessage());
     }
 }

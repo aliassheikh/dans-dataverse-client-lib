@@ -81,6 +81,7 @@ public class DataverseImportDataset extends ExampleBase {
         DataverseHttpResponse<DatasetCreationResult> r = client.dataverse("root").importDataset(dataset,
             doi, false, keyMap);
         log.info("Status Line: {} {}", r.getHttpResponse().getCode(), r.getHttpResponse().getReasonPhrase());
+        log.info("Persistent ID: {}", r.getData().getPersistentId());
     }
 
 }
